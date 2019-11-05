@@ -107,14 +107,14 @@ class Cash
         @y += 1
     end
     def draw
-        @image.draw(@x, @y, ZOrder::CASH)
+        @image.draw(@x, @y, ZOrder::CASH, 0.05, 0.05)
     end
 end
 
 class Large_cash 
     attr_reader :x, :y
     def initialize
-        @image = Gosu::Image.new("media/large_cash.png")
+        @image = Gosu::Image.new("media/cash.png")
         @x = rand * 640
         @y = 0.0
     end
@@ -122,7 +122,7 @@ class Large_cash
         @y += 10
     end
     def draw
-        @image.draw(@x, @y, ZOrder::CASH)
+        @image.draw(@x, @y, ZOrder::CASH, 0.1, 0.1)
     end
 end
 
